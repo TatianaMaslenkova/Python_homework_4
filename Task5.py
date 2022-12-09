@@ -30,6 +30,7 @@ def rle_encrypt_text() -> str:
         elif rle_text[index] != rle_text[index + 1]:
             if count == 1:
                 compressed_txt += rle_text[index]
+                index += 1
             else:
                 compressed_txt += str(count) + rle_text[index]
                 count = 1
